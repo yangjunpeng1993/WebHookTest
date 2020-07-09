@@ -2,9 +2,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>杨少侠的博客</title>
+    <title>少侠日历</title>
+    <link rel="stylesheet" href="index.css" >    
 </head>
 <body>
-    做难事，必有所得。
+    <div class="main">
+        <div class="header">
+            <div class="header-left">
+                <p id="calendar-name">少侠日历</p>
+                <p id="chinese-date">阴历</p>
+                <p id="month-week">阳历</p>
+            </div>
+
+            <div class="header-right">
+                
+            </div>
+        </div>
+
+        <div class="content-text">
+            <div id='main-content'>
+                是顾客决定了企业是什么。因为只有当顾客愿意付钱购买商品或服务时，才能把经济资源转变为财富，把物品转变为商品。企业认为自己的产品是什么，并不是最重要的事情，对于企业的前途和成功尤其不那么重要。顾客认为他购买的是什么，他心目中的“价值”何在，却有决定性的影响，将决定这家企业是什么样的企业，它的产品是什么，以及它会不会成功兴旺。
+                <br/><br/>
+                顾客是企业的基石，是企业存活的命脉，只有顾客才能创造就业的机会。
+            </div>
+            <span id="author">--- 彼得·德鲁克 《管理的实践》</span>
+        </div>
+
+        <div class="footer-img">
+        </div>
+    </div>
+
+    <div class="input-view">
+        <label> 日历内容 </label>
+        <input id="input-content" type="textarea" />
+        <label> 作者名 </label>
+        <input id="input-author" type="textarea" />
+        <label> 图片 </label>
+        <input id="input-img-url" type="textarea" />
+        <button id="download">下载图片</button>
+    </div>
+
+    
 </body>
+    <script type="text/javascript" src="./index.js"></script>
 </html>
