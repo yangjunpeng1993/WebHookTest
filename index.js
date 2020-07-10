@@ -222,6 +222,14 @@ window.onload = function() {
     const chinese_date = document.querySelector('#chinese-date');
     chinese_date.innerHTML = GetLunarDay(yy,mm,dd);
 
+    const input_name = document.querySelector('#input-name');
+    input_name.addEventListener('input', updateName);
+
+    function updateName(e) {
+        const name = document.querySelector('#calendar-name');
+        name.innerHTML = e.target.value;
+    }
+
     const input = document.querySelector('#input-content');
     input.addEventListener('input', updateValue);
 
