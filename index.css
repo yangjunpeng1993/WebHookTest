@@ -26,14 +26,13 @@ body {
           justify-content: space-between;
 }
 
-.main .header .header-left .left-input {
+.main .header .left-input {
   width: 140px;
   margin-left: -3px;
   font-size: 12px;
   font-family: klee;
   border: none;
   margin-top: 0.5em;
-  background-color: none;
 }
 
 .main .header .header-left #calendar-name {
