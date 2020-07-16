@@ -211,7 +211,7 @@ window.onload = function() {
     let month = myDate.getMonth() + 1;
     let week = myDate.getDay();
     const weekDays = ['日', '一', '二', '三', '四', '五', '六'];
-    monthAndWeek.innerHTML = month + ' 月 '+ '| '+'周'+ weekDays[week];
+    monthAndWeek.value = month + ' 月 '+ '| '+'周'+ weekDays[week];
 
     let yy=myDate.getFullYear();
     let mm=myDate.getMonth()+1;
@@ -220,24 +220,26 @@ window.onload = function() {
     let ss=parseInt(myDate.getTime() / 1000);
     if (yy<100) yy="19"+yy;
     const chinese_date = document.querySelector('#chinese-date');
-    chinese_date.innerHTML = GetLunarDay(yy,mm,dd);
+    chinese_date.value = GetLunarDay(yy,mm,dd);
 
     const input_name = document.querySelector('#input-name');
     input_name.addEventListener('input', updateName);
 
     function updateName(e) {
         const name = document.querySelector('#calendar-name');
-        name.innerHTML = e.target.value;
+        name.value = e.target.value;
     }
 
+    /* 日历内容 */
     const input = document.querySelector('#input-content');
     input.addEventListener('input', updateValue);
+    const main_content = document.querySelector('#main-content');
 
     function updateValue(e) {
-        const main_content = document.querySelector('#main-content');
         main_content.innerHTML = e.target.value;
     } 
 
+    /* 内容出处 */
     const input_author = document.querySelector('#input-author');
     input_author.addEventListener('input', updateAuthor);
 
@@ -246,9 +248,11 @@ window.onload = function() {
         author.innerHTML = e.target.value;
     } 
 
+    /* 底部图片 */
     const input_img_url = document.querySelector('#input-img-url');
     input_img_url.addEventListener('input', updateImage);
 
+   
     function updateImage(e) {
         const footer_img = document.querySelector('.footer-img');
         footer_img.style.background = 'url("'+e.target.value+'")';

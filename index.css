@@ -1,57 +1,76 @@
+body {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 .main {
-  float: left;
   width: 375px;
   height: 660px;
+  margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 20px 36px;
   border: thick double #B3B7B9;
+  margin-bottom: 30px;
 }
 
 .main .header {
   border-bottom: 1px dashed #D4D3C3;
-  height: 120px;
+  height: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .main .header .header-left {
-  float: left;
   width: 50%;
 }
 
-.main .header .header-left p {
-  display: block;
+.main .header .header-left .left-input {
+  margin-left: -3px;
   font-size: 12px;
   font-family: klee;
+  border: none;
+  margin-top: 0.5em;
 }
 
 .main .header .header-left #calendar-name {
   font-size: 16px;
   font-family: Weibei SC;
   color: #53595E;
-  margin-top: 10px;
+  margin-top: 0.5em;
+  border: none;
 }
 
 .main .header .header-right {
-  float: left;
-  width: 50%;
+  margin-top: 0;
   font-size: 110px;
   line-height: 100px;
+  text-align: top;
   font-weight: 'bold';
   text-align: right;
   color: #222222;
 }
 
 .main .content-text {
-  margin-top: 16px;
+  margin-top: 1rem;
+}
+
+.main .content-text #main-content {
+  width: 100%;
   font-size: 16px;
   font-family: Kai;
   line-height: 1.65em;
-  text-align: justify;
   color: #181A1D;
+  text-align: justify;
+  border: none;
 }
 
-.main .content-text span {
-  display: block;
+.main .content-text #author {
   margin-top: 5px;
   color: #53595E;
   font-size: 14px;
@@ -69,27 +88,31 @@
 }
 
 .input-view {
-  float: right;
-  margin-right: 500px;
-  width: 302px;
+  width: 90%;
+  max-width: 375px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .input-view #input-name {
-  width: 100%;
   height: 30px;
   margin-bottom: 20px;
 }
 
 .input-view #input-content {
-  width: 100%;
-  height: 400px;
+  height: 300px;
   font-size: 16px;
   font-family: Kai;
   margin-bottom: 20px;
 }
 
 .input-view #input-author {
-  width: 100%;
   height: 30px;
   font-size: 16px;
   font-family: Kai;
@@ -97,8 +120,18 @@
 }
 
 .input-view #input-img-url {
-  width: 100%;
   height: 30px;
   margin-bottom: 20px;
+}
+
+@media (min-width: 800px) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 2em;
+            column-gap: 2em;
+  }
 }
 /*# sourceMappingURL=index.css.map */
