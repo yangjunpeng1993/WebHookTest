@@ -26,7 +26,7 @@ body {
           justify-content: space-between;
 }
 
-.main .header .left-input {
+.main .header .header-left input {
   width: 140px;
   margin-left: -3px;
   font-size: 12px;
