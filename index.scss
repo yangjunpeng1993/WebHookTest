@@ -22,13 +22,14 @@ body {
         justify-content: space-between;
        
         .header-left {
-            width: 50%;
             .left-input {
+                width: 140px;
                 margin-left: -3px;
                 font-size: 12px;
                 font-family: klee;
                 border: none;
                 margin-top: 0.5em;
+                background-color: none;
             }
 
             #calendar-name {
