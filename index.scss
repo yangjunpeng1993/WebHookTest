@@ -1,3 +1,13 @@
+@font-face{
+    font-family: 'Kai'; 
+    src : url('./font/Kai.ttf') format('truetype');
+}
+  
+@font-face{
+    font-family: 'Weibei SC';
+    src : url('./font/weibei-sc-bold.otf') format('truetype');
+}
+
 body {
     width: 100%;
     max-width: 960px;
@@ -22,18 +32,19 @@ body {
         justify-content: space-between;
        
         .header-left {
+            
             input {
                 width: 140px;
                 margin-left: -3px;
                 font-size: 12px;
-                font-family: klee;
+                font-family: klee, 'PingFang SC';
                 border: none;
                 margin-top: 0.5em;
             }
 
             #calendar-name {
                 font-size: 16px;
-                font-family: Weibei SC;
+                font-family: 'Weibei SC';
                 color: #53595E;
                 margin-top: 0.5em;
                 border: none;
