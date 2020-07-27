@@ -1,4 +1,3 @@
-document.write("<script type='text/javascript' src='./html2canvas.js'></script>");
 let now=new Date();  
  
 let lunarinfo=new Array(0x04bd8,0x04ae0,0x0a570,0x054d5,0x0d260,0x0d950,0x16554,0x056a0,0x09ad0,0x055d2,
@@ -195,6 +194,12 @@ return "";
 }
 }
 
+document.addEventListener('DOMContentLoaded', (event) => {
+   document.querySelectorAll('pre code').forEach((block) => {
+     hljs.highlightBlock(block);
+   });
+ });
+
 window.onload = function() {
     let myDate = new Date();
     const day_div = document.querySelector('.header-right');
@@ -236,7 +241,15 @@ window.onload = function() {
     const main_content = document.querySelector('#main-content');
 
     function updateValue(e) {
-        main_content.innerHTML = e.target.value;
+      main_content.innerHTML = marked(e.target.value);
+      // const code = document.querySelector('code');
+      // const worker = new Worker('./worker.js');
+      // console.log(code.textContent);
+      // worker.onmessage = (event) => { code.innerHTML = event.data; }
+      // worker.postMessage(code.textContent);
+      document.querySelectorAll('pre code').forEach((block) => {
+         hljs.highlightBlock(block);
+       });
     } 
 
     /* 内容出处 */
@@ -255,9 +268,9 @@ window.onload = function() {
    
     function updateImage(e) {
         const footer_img = document.querySelector('.footer-img');
-        footer_img.style.background = 'url("'+e.target.value+'")';
-        footer_img.style.backgroundSize = 'cover';
-        footer_img.style.backgroundPosition = 'center center';
+        footer_img.style.backgroundImage = 'url("'+e.target.value+'")';
+      //   footer_img.style.backgroundSize = 'cover';
+      //   footer_img.style.backgroundPosition = 'center center';
     } 
 
     const downloadBtn = document.querySelector('#download');

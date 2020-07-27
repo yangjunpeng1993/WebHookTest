@@ -71,7 +71,7 @@ body {
   width: 100%;
   font-size: 16px;
   font-family: Kai;
-  line-height: 1.65em;
+  line-height: 1.7em;
   color: #181A1D;
   text-align: justify;
   border: none;
@@ -81,6 +81,7 @@ body {
   margin-top: 5px;
   color: #53595E;
   font-size: 14px;
+  font-family: Kai;
   text-align: right;
 }
 
